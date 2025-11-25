@@ -72,7 +72,7 @@ def set_background(image_file: str):
     [data-testid="stSliderLabel"],
     [data-testid="stSliderLabel"] > div {{
         color: #111111 !important;
-        font-size: 1.7rem !important;   /* ← taille des questions */
+        font-size: 1.05rem !important;   /* ← taille des questions */
         font-weight: 600 !important;
     }}
 
