@@ -1,6 +1,3 @@
 streamlit
 pandas
 openpyxl
-os
-datetime
-base64
