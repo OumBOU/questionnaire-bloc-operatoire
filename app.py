@@ -48,15 +48,15 @@ def set_background(image_file: str):
     }}
 
     h1 {{
-        font-size: 2.1rem !important;
-        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
     }}
     h2, .stMarkdown h2 {{
-        font-size: 1.7rem !important;
+        font-size: 1.05rem !important;
         font-weight: 600 !important;
     }}
     h3, .stMarkdown h3 {{
-        font-size: 1.4rem !important;
+        font-size: 1.05rem !important;
         font-weight: 600 !important;
     }}
 
