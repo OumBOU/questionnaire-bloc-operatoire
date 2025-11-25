@@ -48,8 +48,8 @@ def set_background(image_file: str):
     }}
 
     h1 {{
-        font-size: 1.1rem !important;
-        font-weight: 600 !important;
+        font-size: 1.7rem !important;
+        font-weight: 700 !important;
     }}
     h2, .stMarkdown h2 {{
         font-size: 1.05rem !important;
@@ -79,7 +79,7 @@ def set_background(image_file: str):
     /* questions écrites avec st.markdown */
     .stMarkdown p,
     .stMarkdown li {{
-        font-size: 1.3rem !important;
+        font-size: 1.05rem !important;
     }}
 
     /* ---------- TEXTE DE L'ÉCHELLE (PETIT) ---------- */
