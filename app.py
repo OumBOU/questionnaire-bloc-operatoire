@@ -196,7 +196,7 @@ def set_background(image_file: str):
 
     .stButton > button:hover,
     button[kind="primary"]:hover {{
-        background-color: rgba(255, 255, 255, 1.0) !important;
+        background-color: rgba(0, 0, 0, 0.10) !important;
         border-color: rgba(0, 0, 0, 0.3) !important;
     }}
     </style>
