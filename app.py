@@ -185,7 +185,7 @@ def set_background(image_file: str):
     /* ---------- BOUTON "Envoyer mes réponses" ---------- */
     .stButton > button,
     button[kind="primary"] {{
-        background-color: rgba(255, 255, 255, 0.9) !important;  
+        background-color: rgba(0, 0, 0, 0.10) !important;  
         color: #000000 !important;                              
         border-radius: 0.6rem !important;
         border: 1px solid rgba(0, 0, 0, 0.15) !important;
