@@ -23,15 +23,19 @@ def set_background(image_file: str):
 
     css = f"""
     <style>
-    /* ---------- FOND D'ÉCRAN ---------- */
-    [data-testid="stAppViewContainer"] > .main {{
+    /* ---------- FOND D'ÉCRAN (sélecteurs robustes pour différentes versions de Streamlit) ---------- */
+    [data-testid="stAppViewContainer"] > .main,
+    [data-testid="stAppViewContainer"] > main,
+    .stApp, .stApp > main,
+    html, body {{
         background-image:
             linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
-            url("data:image/jpg;base64,{data}");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+            url("data:image/png;base64,{data}");
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        background-color: transparent !important;
     }}
 
     [data-testid="stHeader"] {{
