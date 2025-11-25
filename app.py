@@ -185,10 +185,10 @@ def set_background(image_file: str):
     /* ---------- BOUTON "Envoyer mes réponses" ---------- */
     .stButton > button,
     button[kind="primary"] {{
-        background-color: rgba(255, 255, 255, 0.9) !important;  /* fond clair */
-        color: #111111 !important;                              /* texte bien lisible */
+        background-color: rgba(20, 20, 20, 0.95) !important;  /* fond sombre */
+        color: #ffffff !important;                            /* texte en blanc */
         border-radius: 0.6rem !important;
-        border: 1px solid rgba(0, 0, 0, 0.15) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
         padding: 0.4rem 1.2rem !important;
         font-weight: 600 !important;
         font-size: 1.0rem !important;
@@ -196,8 +196,8 @@ def set_background(image_file: str):
 
     .stButton > button:hover,
     button[kind="primary"]:hover {{
-        background-color: rgba(255, 255, 255, 1.0) !important;
-        border-color: rgba(0, 0, 0, 0.3) !important;
+        background-color: rgba(0, 0, 0, 1.0) !important;
+        border-color: rgba(255, 255, 255, 0.4) !important;
     }}
     </style>
     """
