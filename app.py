@@ -186,7 +186,7 @@ def set_background(image_file: str):
     .stButton > button,
     button[kind="primary"] {{
         background-color: rgba(255, 255, 255, 0.9) !important;  
-        color: #111111 !important;                              
+        color: #000000 !important;                              
         border-radius: 0.6rem !important;
         border: 1px solid rgba(0, 0, 0, 0.15) !important;
         padding: 0.4rem 1.2rem !important;
