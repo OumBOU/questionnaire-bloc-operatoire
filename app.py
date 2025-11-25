@@ -184,20 +184,18 @@ def set_background(image_file: str):
     }}
     /* ---------- BOUTON "Envoyer mes réponses" ---------- */
     .stButton > button,
-    button[kind="primary"] {{
-        background-color: rgba(20, 20, 20, 0.95) !important;  /* fond sombre */
-        color: #ffffff !important;                            /* texte en blanc */
+    .stButton > button * {{            /* le texte (span, etc.) */
+        color: #ffffff !important;    /* texte blanc */
+    }}
+    
+    /* Optionnel : style du fond du bouton */
+    .stButton > button {{
+        background-color: #111827 !important;  /* fond sombre */
         border-radius: 0.6rem !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border: 1px solid rgba(0, 0, 0, 0.15) !important;
         padding: 0.4rem 1.2rem !important;
         font-weight: 600 !important;
         font-size: 1.0rem !important;
-    }}
-
-    .stButton > button:hover,
-    button[kind="primary"]:hover {{
-        background-color: rgba(0, 0, 0, 1.0) !important;
-        border-color: rgba(255, 255, 255, 0.4) !important;
     }}
     </style>
     """
