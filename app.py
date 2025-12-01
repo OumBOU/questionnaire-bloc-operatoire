@@ -1017,4 +1017,4 @@ with st.form("questionnaire"):
             df.to_excel(EXCEL_FILE, index=False)
 
             st.success("Merci ! Vos réponses ont été enregistrées.")
-            st.info(f"Les réponses sont stockées dans le fichier : {EXCEL_FILE}")
+            #st.info(f"Les réponses sont stockées dans le fichier : {EXCEL_FILE}")
