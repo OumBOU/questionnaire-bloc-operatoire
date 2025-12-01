@@ -23,15 +23,19 @@ def set_background(image_file: str):
 
     css = f"""
     <style>
-    /* ---------- FOND D'ÉCRAN ---------- */
-    [data-testid="stAppViewContainer"] > .main {{
+    /* ---------- FOND D'ÉCRAN (sélecteurs robustes pour différentes versions de Streamlit) ---------- */
+    [data-testid="stAppViewContainer"] > .main,
+    [data-testid="stAppViewContainer"] > main,
+    .stApp, .stApp > main,
+    html, body {{
         background-image:
             linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
-            url("data:image/jpg;base64,{data}");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+            url("data:image/png;base64,{data}");
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: fixed !important;
+        background-color: transparent !important;
     }}
 
     [data-testid="stHeader"] {{
@@ -44,15 +48,15 @@ def set_background(image_file: str):
     }}
 
     h1 {{
-        font-size: 2.1rem !important;
+        font-size: 1.7rem !important;
         font-weight: 700 !important;
     }}
     h2, .stMarkdown h2 {{
-        font-size: 1.7rem !important;
+        font-size: 1.05rem !important;
         font-weight: 600 !important;
     }}
     h3, .stMarkdown h3 {{
-        font-size: 1.4rem !important;
+        font-size: 1.05rem !important;
         font-weight: 600 !important;
     }}
 
@@ -68,14 +72,14 @@ def set_background(image_file: str):
     [data-testid="stSliderLabel"],
     [data-testid="stSliderLabel"] > div {{
         color: #111111 !important;
-        font-size: 1.7rem !important;   /* ← taille des questions */
+        font-size: 1.05rem !important;   /* ← taille des questions */
         font-weight: 600 !important;
     }}
 
     /* questions écrites avec st.markdown */
     .stMarkdown p,
     .stMarkdown li {{
-        font-size: 1.3rem !important;
+        font-size: 1.05rem !important;
     }}
 
     /* ---------- TEXTE DE L'ÉCHELLE (PETIT) ---------- */
@@ -180,20 +184,18 @@ def set_background(image_file: str):
     }}
     /* ---------- BOUTON "Envoyer mes réponses" ---------- */
     .stButton > button,
-    button[kind="primary"] {{
-        background-color: rgba(255, 255, 255, 0.9) !important;  
-        color: #111111 !important;                              
+    .stButton > button * {{            /* le texte (span, etc.) */
+        color: #ffffff !important;    /* texte blanc */
+    }}
+    
+    /* Optionnel : style du fond du bouton */
+    .stButton > button {{
+        background-color: #111827 !important;  /* fond sombre */
         border-radius: 0.6rem !important;
         border: 1px solid rgba(0, 0, 0, 0.15) !important;
         padding: 0.4rem 1.2rem !important;
         font-weight: 600 !important;
         font-size: 1.0rem !important;
-    }}
-
-    .stButton > button:hover,
-    button[kind="primary"]:hover {{
-        background-color: rgba(255, 255, 255, 1.0) !important;
-        border-color: rgba(0, 0, 0, 0.3) !important;
     }}
     </style>
     """
