@@ -4,8 +4,11 @@ from datetime import datetime
 import os
 import base64
 
-# Nom du fichier de sortie
-EXCEL_FILE = "reponses_questionnaire_bloc.xlsx"
+# Dossier où se trouve app.py (la racine de ton dépôt GitHub)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Nom du fichier de sortie dans ce dossier
+EXCEL_FILE = os.path.join(BASE_DIR, "reponses_questionnaire_bloc.xlsx")
 
 st.set_page_config(
     page_title="Questionnaire bloc opératoire",
